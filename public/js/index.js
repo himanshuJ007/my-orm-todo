@@ -4,8 +4,6 @@
     //host
     var host = window.location.host;
     
-    // state variables
-    let toDoListArray = [];
     // ui variables
     const form = document.querySelector(".form"); 
     const input = form.querySelector(".form__input");
@@ -16,7 +14,7 @@
       
       let todos=await axios({
         method: 'get',     
-        url: `http://${host}/todo`,
+        url: `https://${host}/todo`,
         //headers: {'Authorization': 'Bearer'+token},
       });
       todos.data.forEach(element => {
@@ -64,7 +62,7 @@
 
       let todo=await axios({
         method: 'post',     //put
-        url: `http://${host}/todo`,
+        url: `https://${host}/todo`,
         //headers: {'Authorization': 'Bearer'+token}, 
         data: {
             "Task_name": toDoItem,
@@ -88,7 +86,7 @@
     function removeItemFromDB(id) {
         axios({
             method: 'delete',     //put
-            url: `http://${host}/todo/${id}`,
+            url: `https://${host}/todo/${id}`,
             //headers: {'Authorization': 'Bearer'+token}, 
             data: {
                 "id":id
