@@ -1,0 +1,12 @@
+First, install TypeORM globally:
+npm install typeorm -g
+
+typeorm init --name MyProject --database mysql
+
+mysql://
+b0e2c3c7f969bd
+:
+382a178d
+@
+us-cdbr-east-02.cleardb.com
+/heroku_1a0cfb96de49b15?reconnect=true
