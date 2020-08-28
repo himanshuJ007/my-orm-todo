@@ -25,7 +25,7 @@ const connection = createConnection({
     entities: [Todo],
     synchronize: true,
 })
-app.get("", async (req, res) => {
+app.get("/", async (req, res) => {
     res
     .status(200)
     .sendFile(path.join(__dirname,"../public/html","index.html"));
